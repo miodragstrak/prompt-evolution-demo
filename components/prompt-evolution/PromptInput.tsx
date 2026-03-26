@@ -25,7 +25,20 @@ export default function PromptInput({
         value={value}
         onChange={(e) => setValue(e.target.value)}
         rows={3}
-        className="w-full resize-none rounded-lg border border-slate-300 p-3 text-sm focus:border-slate-900 focus:outline-none"
+        placeholder="Enter your prompt..."
+        className="
+          w-full resize-none rounded-lg
+          border border-slate-300
+          bg-white
+          p-3
+          text-sm
+          text-slate-900
+          placeholder:text-slate-400
+          focus:border-slate-900
+          focus:outline-none
+          focus:ring-1
+          focus:ring-slate-900
+        "
       />
 
       <div className="mt-3 flex gap-2">

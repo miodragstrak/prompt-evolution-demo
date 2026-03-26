@@ -164,32 +164,84 @@ function NavigationBar({
   return (
     <div className="flex flex-wrap items-center gap-3 border-t border-slate-200 pt-5">
 
+      {/* Previous */}
+
       <button
         onClick={onPrevious}
         disabled={isFirstStep}
-        className="rounded-lg border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50 disabled:opacity-50"
+        className="
+          rounded-lg
+          border border-slate-300
+          bg-white
+          px-4 py-2
+          text-sm
+          font-medium
+          text-slate-700
+          hover:bg-slate-50
+          disabled:bg-slate-200
+          disabled:text-slate-500
+          disabled:border-slate-200
+          disabled:opacity-40
+          disabled:cursor-not-allowed
+        "
       >
         Previous
       </button>
 
+      {/* Play / Pause */}
+
       <button
         onClick={onPlayToggle}
-        className="rounded-lg bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-500"
+        className="
+          rounded-lg
+          bg-blue-600
+          hover:bg-blue-700
+          text-white
+          font-medium
+          px-4 py-2
+          text-sm
+          shadow-sm
+          transition-colors
+        "
       >
         {isPlaying ? 'Pause' : 'Play'}
       </button>
 
+      {/* Next */}
+
       <button
         onClick={onNext}
         disabled={isLastStep}
-        className="rounded-lg bg-slate-900 px-4 py-2 text-sm text-white hover:bg-slate-800 disabled:opacity-50"
+        className="
+          rounded-lg
+          bg-slate-900
+          hover:bg-slate-800
+          text-white
+          font-medium
+          px-4 py-2
+          text-sm
+          shadow-sm
+          disabled:bg-slate-400
+          disabled:cursor-not-allowed
+        "
       >
         Next
       </button>
 
+      {/* Reset */}
+
       <button
         onClick={onReset}
-        className="rounded-lg border border-slate-300 px-4 py-2 text-sm hover:bg-slate-50"
+        className="
+          rounded-lg
+          border border-slate-300
+          bg-white
+          px-4 py-2
+          text-sm
+          font-medium
+          text-slate-700
+          hover:bg-slate-50
+        "
       >
         Reset
       </button>
